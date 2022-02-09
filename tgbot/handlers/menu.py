@@ -12,8 +12,8 @@ async def sell_menu(message: types.Message):
 
 
 def register_menu(dp: Dispatcher):
-    dp.register_message_handler(buy_menu, commands=['/Купить_Квартиру?'])
-    dp.register_message_handler(sell_menu, commands=['/Продать_Квартиру?'])
+    dp.register_message_handler(buy_menu, commands=['Купить_Квартиру?'])
+    dp.register_message_handler(sell_menu, commands=['Продать_Квартиру?'])
     dp.register_message_handler(load_photo, content_types=['photo'], state=FSMAdmin.photo)
     dp.register_message_handler(load_name_adr, state=FSMAdmin.name_adr)
     dp.register_message_handler(load_dom, state=FSMAdmin.dom)
